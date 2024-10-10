@@ -74,6 +74,21 @@
 .home_section.bg_white{
   background-color: #fff;
 }
+.narrow_width{
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.home_section{
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.home_section.bg_gray{
+  background-color: #f5f4f1;
+}
+.home_section.bg_white{
+  background-color: #fff;
+}
 
 
 /* ----------------------------------
@@ -310,4 +325,106 @@ point
 .point_number{
   min-width: 70px;
   margin-right: 48px
+}
+
+/* ---------------------------------------------
+Advertisement List
+---------------------------------------------*/
+.advertisement_list{
+  margin-top: 70px;
+}
+.advertisement_list ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.advertisement_list li{
+  width: 25%;
+  height: 90px;
+  position: relative;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.advertisement_item{
+  background-color: #fff;
+  color: #c9191a;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  line-height: 1.6em;
+}
+/*広告イメージ画像*/
+.advertisement_img{
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* ----------------------------------
+    料金表
+----------------------------------- */
+
+.service_table{
+  margin-top: 70px;
+
+}
+.service_name{
+  background-color: #f5f4f1;
+  width: 100%;
+  text-align: center;
+}
+.service_name h3{
+  font-size: 24px;
+  font-weight: bold;
+  padding: 1em 0.5em;
+}
+.table_area {
+  margin-bottom: 60px;
+}
+.table_area table{
+  border-top: 1px solid #e7e7e7;
+  width: 100%;
+}
+.table_area table th{
+  text-align: center;
+  font-weight: bold;
+  background-color: #fcfcfb;
+}
+.table_area table th,.table_area table td{
+  padding: 1em;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  line-height: 2;
+  border-bottom: 1px solid #e7e7e7;
+  vertical-align: middle;
+}
+.table_area table th + th, .table_area table td + td{
+  border-left: 1px solid #e7e7e7;
+}
+.table_area table td:first-child{
+  font-weight: bold;
+  width: 12em;
+  line-height: 2em;
+}
+.table_area table td:nth-child(n + 3){
+  text-align: center;
+  width: 10em;
+}
+
+.price_wide{
+  width: 20em;
+}
+.service_supplement li{
+  font-size: 14px;
+  color: #808080;
+}
+.service_supplement li + li{
+  margin-top: 1.25em;
 }
