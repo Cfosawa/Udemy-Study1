@@ -71,6 +71,9 @@
 .home_section.bg_gray{
   background-color: #f5f4f1;
 }
+.home_section.bg_white{
+  background-color: #fff;
+}
 
 
 /* ----------------------------------
@@ -122,9 +125,9 @@ first view
 
 }
 
-/* -----------
+/* ---------------------------------------------
 こんなお悩みありませんか？
------------*/
+---------------------------------------------*/
 .intro_flex{
   display: flex;
   padding-top: 74px;
@@ -225,4 +228,86 @@ first view
   right: 0;
   top: 50%;
   transform: translate(110%,-50%);
+}
+
+/* ---------------------------------------------
+提供できるサービス
+---------------------------------------------*/
+.service_flex{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 70px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.service_flex .service_box{
+  width: 33.3333%;
+  padding: 0 15px;
+  position: relative;
+}
+.service_flex .service_box .service_box_inner{
+  border: 3px solid #c9191a;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10;
+}
+.service_flex .service_box .service_box_inner p{
+  font-weight: bold;
+  text-align: center;
+}
+.service_title{
+  color: #c9191a;
+  padding-top: 50px;
+  font-size: 30px;
+}
+.service_price{
+  font-size: 22px;
+  margin-top: 26px;
+}
+.service_price >span{
+  font-size: 16px;
+  display: block;
+  margin-top: 0.5em;
+}
+.service_image{
+  text-align: center;
+}
+/* ---------------------------------------------
+point
+---------------------------------------------*/
+.point_wrap{
+  margin-top: 70px;
+  margin-bottom: 120px;
+}
+.point_block{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+}
+.point_block + .point_block{
+  margin-top: 20px;
+}
+.point_text{
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.point_text h3{
+  font-size: 30px;
+  color: #c9191a;
+  font-weight: bold;
+}
+.point_text p{
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 2;
+  margin-top: 1em;
+}
+.point_number{
+  min-width: 70px;
+  margin-right: 48px
 }
