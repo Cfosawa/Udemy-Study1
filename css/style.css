@@ -60,8 +60,6 @@
     基本レイアウト
 ----------------------------------- */
 .main_width{
-  
-  height: 500px;
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
@@ -69,6 +67,9 @@
 .home_section{
   padding-top: 140px;
   padding-bottom: 140px;
+}
+.home_section.bg_gray{
+  background-color: #f5f4f1;
 }
 
 
@@ -88,7 +89,7 @@
     header
 ----------------------------------- */
 header{
-  
+  background-color:white;
   width: 100%;
   height: 75px;
   position: relative;
@@ -119,4 +120,109 @@ first view
 #first_view_img{
   width: 100%;
 
+}
+
+/* -----------
+こんなお悩みありませんか？
+-----------*/
+.intro_flex{
+  display: flex;
+  padding-top: 74px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.intro_box{
+  width: 33.3333%;
+  
+}
+/* 真ん中を下げる*/
+.intro_box:nth-child(2){
+  transform: translateY(50px);
+
+}
+.intro_box .fukidashi{
+  background-color: #ffffff;
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+}
+.intro_box .fukidashi p{
+  padding: 40px;
+  font-size: 22px;
+  line-height: 1.8em;
+  letter-spacing: 0.04em;
+
+}
+/* 擬似要素。もやもや。。*/
+.intro_box .fukidashi::before{
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url("../img/moyamoya.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 68px;
+  height: 78px;
+  top: -52px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.intro_box .fukidashi::after{
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url("../img/fukidashi.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 34px;
+  height: 26px;
+  bottom: -24px;
+  right: 32px;
+}
+
+
+/* intro catch その悩み〜お任せください！*/
+.intro_catch{
+  padding-top: 140px;
+  display: flex;
+  justify-content: center;
+}
+.intro_catch p{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+.intro_catch p span.red{
+  color: #c9191a;
+}
+.intro_catch p::before{
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-image: url("../img/underline.png");
+  left: 0;
+  bottom: -10px;
+}
+.intro_catch p::after{
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("../img/toki.png");
+  width: 168px;
+  height: 148px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 50%;
+  transform: translate(110%,-50%);
 }
