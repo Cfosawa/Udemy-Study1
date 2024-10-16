@@ -613,3 +613,84 @@ contact
     top: 50%;
     transform: translateY(-50%);
 }
+/* ---------------------------------------------
+Profile
+---------------------------------------------*/
+.company_prof{
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.company_prof dl{
+  display: flex;
+  font-size: 16px;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 2em 0;
+  width: 100%;
+  align-items: center;
+}
+.company_prof dl + dl{
+  border-top: none;
+}
+.company_prof dl dt{
+  font-weight: bold;
+  min-width: 8em;
+}
+.company_prof dl dt,
+.company_prof dl dd{
+  line-height: 2;
+}
+.company_prof dl dd a{
+  color: #c9191a;
+  text-decoration: underline;
+}
+.company_prof dl dd a:hover{
+  text-decoration: none;
+}
+/*フッター！*/
+footer{
+  padding-top: 140px;
+  padding-bottom: 40px;
+  background-color: #c9191a;
+}
+.content_navi ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.content_navi ul li{
+  width: 33.3333%;
+  color: #fff;
+  margin-bottom: 60px;
+  padding: 0 16px;
+}
+.content_navi ul li span{
+  display: block;
+}
+.content_navi a .en {
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  font-family: "Lato", sans-serif;
+}
+.content_navi a span.jp {
+  font-size: 16px;
+}
+
+/*一番下のプライバシー、コピーライトのとこ*/
+footer .privacy_policy{
+  text-align: center;
+  margin-bottom: 40px;
+}
+footer .privacy_policy .jp{
+  font-size: 14px;
+  color: #fff;
+}
+footer .copy_right{
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
