@@ -312,6 +312,7 @@
         </div>
     </section>
 
+    <!--縦書きメッセージ-->
     <section id="message" class="home_section bg_parallax">
       <div class="main_width">
         <div class="message_cont">
@@ -336,6 +337,113 @@
       </div>
 
     </section>
+
+    <!--お問い合わせフォーム-->
+    <section id="contact" class="home_section bg_gray">
+      <div class="main_width"><!--main width-->
+        <div class="section_title">
+          <h2>お問い合わせ</h2>
+        </div>
+        <div class="form_area narrow_width">
+          <p class="form_caution">必要事項を入力の上「確認画面へ」をクリックしてください（<span class="red">*</span>は必須項目です）。</p>
+          <form id="contact_form" action="form" method="post">
+            <dl>
+              <dt>
+                <span>会社／所属名</span>
+              </dt>
+              <dd>
+                <input type="text" name="your_comapany">
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <span class="required">氏名</span>
+              </dt>
+              <dd>
+                <input type="text" name="your_name">
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <span class="required">メールアドレス</span>
+              </dt>
+              <dd>
+                <input type="email" name="your_email">
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <span>電話番号</span>
+              </dt>
+              <dd>
+                <input type="tel" name="your_tel">
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <span class="required">お問い合わせの種類 </span>
+              </dt>
+              <dd class="select_wrap">
+                <select name="contact_type">
+                  <option value="" selected disable>選択してください</option>
+                  <option value="select1">選択肢1</option>
+                  <option value="select2">選択肢2</option>
+                  <option value="select3">選択肢3</option>
+                  </select>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <span class="required">お問い合わせ内容</span>
+              </dt>
+              <dd>
+                <textarea name="your_message"></textarea>
+              </dd>
+            </dl>
+            <div class="link_btn">
+              <button type="submit"><span>送信</span></button>
+            
+            </div>
+
+
+          </form>
+        </div>
+        
+      </div><!--main width-->
+    </section>
+
+    <!--会社概要-->
+    <section id="profile" class="home_section bg_white">
+    <div class="main_width"><!--main width-->
+      <div class="section_title">
+        <h2>会社概要</h2>
+      </div>
+      <div class="company_prof">
+        <dl>
+          <dt>社名</dt>
+          <dd>株式会社EDOPON</dd>
+        </dl>
+        <dl>
+          <dt>英文社名</dt>
+          <dd>EDOPON Co.,Ltd.</dd>
+        </dl>
+        <dl>
+          <dt>設立</dt>
+          <dd>2014年8月4日</dd>
+        </dl>
+        <dl>
+          <dt>所在地</dt>
+          <dd>〒000-1234 新潟県佐渡市xxx-xxx（地図を見る）<br> 0259-00-1234 / FAX 0259-00-1235</dd>
+        </dl>
+        <dl>
+          <dt>業務内容</dt>
+          <dd>広告運用代行<br>SNSアカウントの運用代行<br>TOKYO RESTAURANTS GUIDEの運営</dd>
+        </dl>
+      </div>
+      
+    </div><!--main width-->
+    </section>
+
 
 
   </div>

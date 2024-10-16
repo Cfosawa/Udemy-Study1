@@ -105,7 +105,8 @@
 .link_btn{
   margin-top: 70px;
 }
-.link_btn a{
+.link_btn a,
+.link_btn button{
   width: 100%;
   max-width: 300px;
   height: 80px;
@@ -120,11 +121,16 @@
   margin: auto;
   transition: 0.5s;
   margin-top: 70px;
+  cursor: pointer;
 }
 
-.link_btn a:hover{
+.link_btn a:hover,
+.link_btn button:hover{
   background-color: #aa1212;
   transition: 0.3s;
+}
+.red{
+  color: #c9191a;
 }
 
 
@@ -162,7 +168,7 @@ first view
 
 #first_view_img{
   width: 100%;
-
+  
 }
 
 /* ---------------------------------------------
@@ -242,9 +248,7 @@ first view
   letter-spacing: 0.05em;
   position: relative;
 }
-.intro_catch p span.red{
-  color: #c9191a;
-}
+
 .intro_catch p::before{
   position: absolute;
   display: block;
@@ -541,4 +545,71 @@ Advertisement List
 .bg_parallax .message_cont .message_text p + ul,
 .bg_parallax .message_cont .message_text ul + p{
   margin-top: 2em;
+}
+
+/* ---------------------------------------------
+contact
+---------------------------------------------*/
+.form_caution{
+  font-size: 14px;
+  text-align: center;
+  color: #808080;
+}
+.form_area form{
+  margin: 50px auto 0;
+}
+.form_area dl dt{
+  font-weight: bold;
+  min-width: 13em;
+  margin-top: 1.2em;
+}
+.form_area dl dt span.required{
+  position: relative;
+}
+.form_area dl{
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  width: 100%;
+  padding: 5px 0;
+}
+.form_area dl dt span.required::after{
+  position: relative;
+  content: "*";
+  color: #aa1212;
+  margin-left: 0.5em;
+}
+.form_area dl dd{
+  width: 100%;
+}
+.form_area input,
+.form_area select,
+.form_area textarea{
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1.2em 2em;
+}
+.form_area textarea{
+  height: 10em;
+}
+
+/*三角形の擬似要素！*/
+.select_wrap{
+  position: relative;
+}
+.select_wrap::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-top: 8px solid #808080;
+    border-bottom: 0;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
 }
