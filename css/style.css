@@ -64,6 +64,18 @@
   margin-right: auto;
   margin-left: auto;
 }
+@media only screen and (max-width: 1300px){
+  .main_width{
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+@media only screen and (max-width: 768px){
+  .main_width{
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
 .home_section{
   padding-top: 140px;
   padding-bottom: 140px;
@@ -170,6 +182,8 @@ header #hd_menu_btn img{
 #first_view{
   background-color: #c9191a;
   color: #fff;
+  margin-top: 76px;
+  position: relative;
 }
 #first_view .kv_bg{
   width: 100%;
@@ -178,13 +192,20 @@ header #hd_menu_btn img{
   background-position: right center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #first_view .main_width{
   padding-top: 140px;
   padding-bottom: 120px;
   z-index: 1;
   position: relative;
+}
+@media only screen and (max-width:768px){
+  #first_view .main_width{
+    padding-top: 60px;
+  }
 }
 
 #first_view .kv_bg span{
@@ -201,6 +222,17 @@ header #hd_menu_btn img{
   width: 100%;
   height: auto;
 }
+@media only screen and (max-width:768px){
+  #first_view .kv_bg{
+    background-position: center bottom;
+  }
+  #first_view .kv_bg span{
+    align-items: flex-end;
+    right: 30px;
+    width: 50px;
+  }
+}
+
 #first_view .kv_logo{
   margin-bottom: 60px;
 }
@@ -215,10 +247,26 @@ header #hd_menu_btn img{
 #first_view .kv_logo span:first-child{
   margin-right: 0.2em;
 }
+@media only screen and (max-width:1024px) {
+  #first_view .kv_logo span{
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+@media only screen and (max-width:768px) {
+  #first_view .kv_logo{
+    margin-bottom: 40px;
+  }
+  #first_view .kv_logo span{
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
 #first_view .kv_text{
   width: 600px;
   max-width: 100%;
 }
+
 #first_view .kv_text h2 span{
   font-size: 55px;
   font-weight: bold;
@@ -231,9 +279,36 @@ header #hd_menu_btn img{
   line-height: 2;
   margin-top: 1.4em;
 }
+@media only screen and (max-width:1024px){
+  #first_view .kv_text h2 span{
+    font-size: 40px; 
+  }
+  #first_view .kv_text h2 span + span{
+    font-size: 44px;
+  } 
+}
+@media only screen and (max-width:768px){
+  #first_view .kv_text h2 span{
+    font-size: 30px; 
+  }
+  #first_view .kv_text h2 span + span{
+    font-size: 36px;
+  }
+  #first_view .kv_text p{
+    font-size: 16px;
+  }  
+}
+@media only screen and (max-width:480px){
+  #first_view .kv_text p span{
+    display: block;
+  }
+  #first_view .kv_text p br{
+    display: none;
+  }
+}
 #first_view .scroll{
   position: absolute;
-  bottom: -40%;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -242,11 +317,16 @@ header #hd_menu_btn img{
   display: block;
   padding-bottom: 20px;
 }
-#first_view .scroll a:hover{
-  padding-bottom: 15px;
-  transition: all 0.5s;
-}
 
+@media only screen and (min-width:769px){
+  #first_view .scroll a {
+    transition: 0.5s;
+  }
+  #first_view .scroll a:hover{
+    padding-bottom: 15px;
+    transition: all 0.5s;
+  }
+}
 
 /* ---------------------------------------------
 こんなお悩みありませんか？
