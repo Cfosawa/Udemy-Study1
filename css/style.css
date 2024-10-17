@@ -59,6 +59,9 @@
 /* ----------------------------------
     基本レイアウト
 ----------------------------------- */
+#wrapper{
+  overflow: hidden;
+}
 .main_width{
   max-width: 1200px;
   margin-right: auto;
@@ -101,6 +104,12 @@
 .home_section.bg_white{
   background-color: #fff;
 }
+@media only screen and (max-width: 768px){
+  .home_section{
+    padding-top: 70px;
+  padding-bottom: 70px;
+  }
+}
 
 
 /* ----------------------------------
@@ -113,7 +122,16 @@
   letter-spacing: 0.05em;
   margin-bottom: 70px;
 }
-.section_title h2
+.section_title h2 span{
+  display: inline-block;
+}
+
+@media only screen and (max-width: 768px){
+  .section_title h2{
+    font-size: 24px;
+    margin-bottom: 26px;
+  }
+}
 .link_btn{
   margin-top: 70px;
 }
@@ -131,16 +149,30 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  transition: 0.5s;
   margin-top: 70px;
+}
+@media only screen and (min-width:769px){
+  .link_btn a,
+.link_btn button{
+  transition: 0.5s;
   cursor: pointer;
 }
-
-.link_btn a:hover,
+  .link_btn a:hover,
 .link_btn button:hover{
   background-color: #aa1212;
   transition: 0.3s;
 }
+}
+@media only screen and (max-width:768px){
+  .link_btn a,
+  .link_btn button{
+    max-width: 220px;
+    height: 60px;
+    font-size: 16px;
+    margin-top: 50px;
+  }
+}
+
 .red{
   color: #c9191a;
 }
@@ -155,11 +187,24 @@ header{
   height: 75px;
   position: relative;
 }
+
 header #hd_logo{
   padding: 10px 80px;
   height: 100%;
   display: flex;
   align-items: center;
+}
+header #hd_logo h1{
+  align-items: center;
+
+display: flex;}
+@media only screen and (max-width:768px){
+  header{
+    height: 60px;
+  }
+  header #hd_logo{
+    padding: 10px 20px;
+  }
 }
 /* ハンバーガーメニュー */
 header #hd_menu_btn{
@@ -174,16 +219,19 @@ header #hd_menu_btn img{
   height: 100%;
 }
 
-
 /* -----------
 ファーストビュー
 -----------*/
-
 #first_view{
+  margin-top: 0;
   background-color: #c9191a;
   color: #fff;
-  margin-top: 76px;
   position: relative;
+}
+@media only screen and (max-width:768px){
+  #first_view{
+  margin-top: 0;
+  }
 }
 #first_view .kv_bg{
   width: 100%;
@@ -196,18 +244,6 @@ header #hd_menu_btn img{
   top: 0;
   left: 0;
 }
-#first_view .main_width{
-  padding-top: 140px;
-  padding-bottom: 120px;
-  z-index: 1;
-  position: relative;
-}
-@media only screen and (max-width:768px){
-  #first_view .main_width{
-    padding-top: 60px;
-  }
-}
-
 #first_view .kv_bg span{
   position: absolute;
   display: flex;
@@ -232,7 +268,17 @@ header #hd_menu_btn img{
     width: 50px;
   }
 }
-
+#first_view .main_width{
+  padding-top: 140px;
+  padding-bottom: 120px;
+  z-index: 1;
+  position: relative;
+}
+@media only screen and (max-width:768px){
+  #first_view .main_width{
+    padding-top: 60px;
+  }
+}
 #first_view .kv_logo{
   margin-bottom: 60px;
 }
@@ -333,17 +379,29 @@ header #hd_menu_btn img{
 ---------------------------------------------*/
 .intro_flex{
   display: flex;
+  flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
 }
 .intro_box{
-  width: 33.3333%;
-  
+  width: 33.3333%; 
 }
-/* 真ん中を下げる*/
-.intro_box:nth-child(2){
-  transform: translateY(50px);
-
+/* 真ん中を下げる(スマホ版は下げずに、縦並び)*/
+@media only screen and (min-width:769px){
+  .intro_box:nth-child(2){
+    transform: translateY(50px);
+  }
+}
+@media only screen and (max-width:768px){
+  .intro_flex{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro_box{
+    width: 100%;
+    margin-top: 60px;
+  }
 }
 .intro_box .fukidashi{
   background-color: #ffffff;
@@ -356,11 +414,22 @@ header #hd_menu_btn img{
   position: relative;
 }
 .intro_box .fukidashi p{
-  padding: 40px;
+  padding: 1.8em;
   font-size: 22px;
   line-height: 1.8em;
-  letter-spacing: 0.04em;
-
+  letter-spacing: 0.03em;
+  color: #808080;
+  font-weight: bold;
+}
+@media only screen and (max-width:1024px){
+  .intro_box .fukidashi p{
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width:768px){
+  .intro_box .fukidashi p{
+    font-size: 16px;
+  }
 }
 /* 擬似要素。もやもや。。*/
 .intro_box .fukidashi::before{
@@ -390,6 +459,13 @@ header #hd_menu_btn img{
   bottom: -24px;
   right: 32px;
 }
+@media only screen and (max-width:768px){
+  .intro_box .fukidashi::before{
+    width: 54px;
+    height: 62px;
+    top: -40px;
+  }
+}
 
 
 /* intro catch その悩み〜お任せください！*/
@@ -405,7 +481,14 @@ header #hd_menu_btn img{
   letter-spacing: 0.05em;
   position: relative;
 }
-
+@media only screen and (max-width:768px){
+  .intro_catch p{
+    font-size: 26px;
+  }
+  .intro_catch p > span{
+    display: block;
+  }
+}
 .intro_catch p::before{
   position: absolute;
   display: block;
@@ -429,6 +512,22 @@ header #hd_menu_btn img{
   top: 50%;
   transform: translate(110%,-50%);
 }
+@media only screen and (max-width:1024px){
+  .intro_catch p::after{
+    width: 134px;
+    height: 118px;
+    transform: translate(70%,-80%);
+    top: 0;
+  }
+}
+@media only screen and (max-width:768px){
+  .intro_catch p::after{
+    width: 84px;
+    height: 74px;
+    transform: translate(50%,-50%);
+    top: 0;
+  }
+}
 
 /* ---------------------------------------------
 提供できるサービス
@@ -443,6 +542,20 @@ header #hd_menu_btn img{
   width: 33.3333%;
   padding: 0 15px;
   position: relative;
+}
+@media only screen and (max-width:768px){
+  .service_flex{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .service_flex .service_box{
+    width: 100%;
+    padding: 0;
+  }
+  .service_flex .service_box + .service_box{
+    margin-top: 20px;
+  }
 }
 .service_flex .service_box .service_box_inner{
   border: 3px solid #c9191a;
@@ -461,10 +574,12 @@ header #hd_menu_btn img{
   color: #c9191a;
   padding-top: 50px;
   font-size: 30px;
+
 }
+
 .service_price{
   font-size: 22px;
-  margin-top: 26px;
+  margin-top: 1.2em;
 }
 .service_price >span{
   font-size: 16px;
@@ -473,6 +588,38 @@ header #hd_menu_btn img{
 }
 .service_image{
   text-align: center;
+}
+@media only screen and (max-width:1024px){
+  .service_title{
+    font-size: 24px;
+    padding-top: 40px;
+  }
+  .service_title >span{
+    display: block;
+  }
+  .service_price{
+      font-size: 18px;
+    }
+  .service_price >span{
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width:768px){
+  .service_title{
+    font-size: 20px;
+    padding-top: 30px;
+    
+  }
+  .service_price{
+      font-size: 16px;
+    }
+  .service_price >span{
+    font-size: 14px;
+  }
+  .service_image{
+    padding: 0 20px;
+  }
+  
 }
 /* ---------------------------------------------
 point
@@ -485,6 +632,17 @@ point
   display: flex;
   align-items: center;
   padding: 0 64px;
+}
+@media only screen and (max-width:1024px){
+  .point_block{
+    padding: 0 48px;
+    }
+}
+@media only screen and (max-width:768px){
+  .point_block{
+    display: block;
+    padding: 30px;
+    }
 }
 .point_block + .point_block{
   margin-top: 20px;
@@ -509,6 +667,35 @@ point
   min-width: 70px;
   margin-right: 48px
 }
+@media only screen and (max-width:1024px){
+  .point_text{
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .point_text h3{
+  font-size: 26px;
+}
+}
+@media only screen and (max-width:768px){
+  .point_text{
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+.point_text h3{
+  font-size: 20px;
+  text-align: center;
+}
+.point_text p{
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: normal;
+}
+.point_number{
+  width: 40px;
+  min-width: 40px;
+  margin-left: auto;
+  margin-right: auto;}
+}
 
 /* ---------------------------------------------
 Advertisement List
@@ -528,6 +715,30 @@ Advertisement List
   padding: 0 10px;
   margin-bottom: 20px;
 }
+@media only screen and (max-width:1024px){
+  .advertisement_list ul{
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .advertisement_list li{
+    padding: 0 6px;
+    margin-bottom: 20px;
+   }
+}
+@media only screen and (max-width:768px){
+   .advertisement_list ul{
+    justify-content: flex-start;
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+  .advertisement_list li{
+     width: 50%;
+     height: 60px;
+     padding: 0 4px;
+     margin-bottom: 20px;
+    }
+}
+
 .advertisement_item{
   background-color: #fff;
   color: #c9191a;
@@ -542,10 +753,25 @@ Advertisement List
   border-radius: 8px;
   line-height: 1.6em;
 }
+@media only screen and (max-width:1024px){
+  .advertisement_item{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width:480px){
+  .advertisement_item{
+    font-size: 14px;
+  }
+}
 /*広告イメージ画像*/
 .advertisement_img{
   margin-top: 40px;
   text-align: center;
+}
+@media only screen and (max-width:768px){
+  .advertisement_img{
+    margin-top: 34px;
+  }
 }
 
 /* ----------------------------------
@@ -563,12 +789,26 @@ Advertisement List
   font-weight: bold;
   padding: 1em 0.5em;
 }
+@media only screen and (max-width:768px){
+  .service_name h3{
+    ont-size: 16px;
+  }
+}
 .table_area {
+  overflow-x: auto;
   margin-bottom: 60px;
 }
 .table_area table{
   border-top: 1px solid #e7e7e7;
   width: 100%;
+}
+@media only screen and (max-width:768px){
+  .table_area {
+    margin-bottom: 60px;
+  }
+  .table_area table{
+    min-width: 800px;
+}
 }
 .table_area table th{
   text-align: center;
@@ -582,6 +822,12 @@ Advertisement List
   line-height: 2;
   border-bottom: 1px solid #e7e7e7;
   vertical-align: middle;
+}
+@media only screen and (max-width:768px){
+  .table_area table th,.table_area table td{
+    font-size: 14px;
+    line-height: 1.8;
+  }
 }
 .table_area table th + th, .table_area table td + td{
   border-left: 1px solid #e7e7e7;
@@ -625,28 +871,6 @@ Advertisement List
   padding: 0 20px;
   position: relative;
 }
-.flow_contents{
-  background-color: #fff;
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-}
-.flow_contents .flow_number{
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1;
-}
-.flow_contents .flow_title{
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 1;
-}
-.flow_contents .flow_img{
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 /* 擬似要素。▶︎*/
 .flow_list ol li::before{
   position: absolute;
@@ -664,7 +888,78 @@ Advertisement List
 }
 .flow_list ol li:first-child::before{
   display: none;
+}/* 擬似要素終わり。▶︎*/
+
+@media only screen and (max-width:1024px){
+  .flow_list{
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .flow_list ol li{
+    padding: 0 8px;
+  }
+  .flow_list ol li::before{
+    width: 8px;
+    height: 15px;
+  }
 }
+
+@media only screen and (max-width:768px){
+  .flow_list{
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+  .flow_list ol{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .flow_list ol li{
+    width: 50%;
+    padding: 4px;
+  }
+  .flow_list ol li::before{
+    display: none;
+  }
+}
+.flow_contents{
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.flow_contents .flow_number{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+}
+.flow_contents .flow_title{
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+}
+.flow_contents .flow_img{
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media only screen and (max-width:1024px){
+  .flow_contents .flow_number{
+    font-size: 20px;
+  }
+  .flow_contents .flow_title{
+    font-size: 16px;
+  }
+  .flow_contents .flow_img{
+    margin: 16px 0;
+  }
+  .flow_contents .flow_img img{
+    width: auto;
+    height: 50px;
+  }
+}
+
+
 /* ----------------------------------
    メッセージ
 ----------------------------------- */
@@ -802,9 +1097,12 @@ Profile
   color: #c9191a;
   text-decoration: underline;
 }
-.company_prof dl dd a:hover{
-  text-decoration: none;
+@media only screen and (min-width:769px){
+  .company_prof dl dd a:hover{
+    text-decoration: none;
+  }
 }
+
 /*フッター！*/
 footer{
   padding-top: 140px;
