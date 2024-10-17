@@ -162,14 +162,91 @@ header #hd_menu_btn img{
   height: 100%;
 }
 
+
 /* -----------
-first view
+ファーストビュー
 -----------*/
 
-#first_view_img{
-  width: 100%;
-  
+#first_view{
+  background-color: #c9191a;
+  color: #fff;
 }
+#first_view .kv_bg{
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/kv_bg.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+#first_view .main_width{
+  padding-top: 140px;
+  padding-bottom: 120px;
+  z-index: 1;
+  position: relative;
+}
+
+#first_view .kv_bg span{
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  top: 0;
+  right: 50px;
+  width: 102px;
+  height: 100%;
+}
+#first_view .kv_bg span img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#first_view .kv_logo{
+  margin-bottom: 60px;
+}
+#first_view .kv_logo span{
+  font-size: 146px;
+  line-height: 146px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  display: inline-block;
+}
+#first_view .kv_logo span:first-child{
+  margin-right: 0.2em;
+}
+#first_view .kv_text{
+  width: 600px;
+  max-width: 100%;
+}
+#first_view .kv_text h2 span{
+  font-size: 55px;
+  font-weight: bold;
+}
+#first_view .kv_text h2 span + span{
+  font-size: 60px;
+}
+#first_view .kv_text p{
+  font-size: 24px;
+  line-height: 2;
+  margin-top: 1.4em;
+}
+#first_view .scroll{
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+#first_view .scroll a {
+  display: block;
+  padding-bottom: 20px;
+}
+#first_view .scroll a:hover{
+  padding-bottom: 15px;
+  transition: all 0.5s;
+}
+
 
 /* ---------------------------------------------
 こんなお悩みありませんか？
@@ -671,6 +748,7 @@ footer{
   font-size: 40px;
   letter-spacing: 0.05em;
   font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 .content_navi a span.jp {
   font-size: 16px;
