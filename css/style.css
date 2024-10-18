@@ -970,24 +970,38 @@ Advertisement List
   background-position: center bottom;
   background-size: cover;
 }
+
 .message_cont{
   color: #fff;
-  max-width: 800px;
+  max-width: 500px;
   width: 100%;
-  display: flex;
   margin: auto;
-   padding: 0 70px;
+  padding: 0;
 }
-.bg_parallax .message_cont .section_title h2{
+@media only screen and (min-width:769px){
+  .message_cont{
+    max-width: 800px;
+    display: flex;
+    padding: 0 70px;
+  }
+  .bg_parallax .message_cont .section_title h2{
   writing-mode: vertical-rl;
   text-align: left;
   margin-right: 2em;
+}
 }
 .bg_parallax .message_cont .message_text p,
 .bg_parallax .message_cont .message_text li{
   font-size: 18px;
   line-height: 2;
   font-weight: bold;
+}
+@media only screen and (max-width:768px){
+  .bg_parallax .message_cont .message_text p,
+.bg_parallax .message_cont .message_text li{
+  font-size: 16px;
+  line-height: 1.8em;
+}
 }
 .bg_parallax .message_cont .message_text li{
   text-indent: -1em;
@@ -1010,20 +1024,22 @@ contact
 .form_area form{
   margin: 50px auto 0;
 }
-.form_area dl dt{
-  font-weight: bold;
-  min-width: 13em;
-  margin-top: 1.2em;
-}
-.form_area dl dt span.required{
-  position: relative;
-}
 .form_area dl{
   display: flex;
   align-items: flex-start;
   font-size: 16px;
   width: 100%;
   padding: 5px 0;
+}
+
+.form_area dl dt{
+  font-weight: bold;
+  min-width: 13em;
+  margin-top: 1.2em;
+}
+
+.form_area dl dt span.required{
+  position: relative;
 }
 .form_area dl dt span.required::after{
   position: relative;
@@ -1044,6 +1060,22 @@ contact
 }
 .form_area textarea{
   height: 10em;
+}
+@media only screen and (max-width:768px){
+  .form_caution > span{
+    display: block;
+    padding-top: 0.5em;
+  }
+  .form_area form{
+    margin: 34px auto 0;
+  }
+  .form_area dl{
+    display: block;
+    font-size: 14px;
+  }
+  .form_area dl dt{
+    padding-bottom: 1em;
+  }
 }
 
 /*三角形の擬似要素！*/
@@ -1102,12 +1134,30 @@ Profile
     text-decoration: none;
   }
 }
+@media only screen and (max-width:768px){
+  .company_prof dl{
+    font-size: 14px;
+  }
+  .company_prof dl dd{
+  line-height: 1.8;
+}
+}
+@media only screen and (max-width:480px){
+  .company_prof dl{
+    display: block;
+  }
+  .company_prof dl dd{
+  line-height: 1.6;
+}
+}
 
 /*フッター！*/
 footer{
+  position: relative;
   padding-top: 140px;
   padding-bottom: 40px;
   background-color: #c9191a;
+  z-index: 2;
 }
 .content_navi ul{
   display: flex;
@@ -1118,6 +1168,9 @@ footer{
   color: #fff;
   margin-bottom: 60px;
   padding: 0 16px;
+}
+.content_navi a{
+  display: block;
 }
 .content_navi ul li span{
   display: block;
@@ -1132,6 +1185,7 @@ footer{
   font-size: 16px;
 }
 
+
 /*一番下のプライバシー、コピーライトのとこ*/
 footer .privacy_policy{
   text-align: center;
@@ -1141,11 +1195,50 @@ footer .privacy_policy .jp{
   font-size: 14px;
   color: #fff;
 }
+
 footer .copy_right{
   text-align: center;
   font-size: 12px;
   color: #fff;
 }
+@media only screen and (max-width:1024px){
+  footer{
+    padding-top: 80px;
+    padding-bottom: 18px;
+  }
+  .content_navi ul li{
+    margin-bottom: 40px;
+  }
+  .content_navi a .en {
+    font-size: 30px;
+    }
+  .content_navi a span.jp {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:768px){
+  footer{
+    padding-top: 40px;
+    padding-bottom: 18px;
+  }
+  footer .content_navi ul{
+    display: none;
+  }
+  footer .privacy_policy{
+    margin-bottom: 28px;
+  }
+}
+@media only screen and (min-width:769px){
+  .content_navi a:hover{
+    opacity: 0.6;
+    transition: all 0.5s;
+  }
+  .content_navi a{
+    transition: all 0.5s;
+  }
+}
+
 
 font-family: "Lato", sans-serif;
   font-weight: 700;
