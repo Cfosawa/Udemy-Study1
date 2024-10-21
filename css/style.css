@@ -104,12 +104,33 @@
 .home_section.bg_white{
   background-color: #fff;
 }
+#message.home_section{
+  padding-bottom: 190px;
+}
+#contact.home_section{
+  padding-top: 90px;
+}
+@media only screen and (max-width: 1024px){
+  #message.home_section{
+    padding-bottom: 180px;
+  }
+  #contact.home_section{
+    padding-top: 100px;
+  }
+}
 @media only screen and (max-width: 768px){
   .home_section{
     padding-top: 70px;
   padding-bottom: 70px;
   }
+  #message.home_section{
+    padding-bottom: 100px;
+  }
+  #contact.home_section{
+    padding-top: 40px;
+  }
 }
+
 
 /* ----------------------------------
     擬似要素
@@ -1008,8 +1029,8 @@ Advertisement List
   background-attachment: fixed;
   background-position: center bottom;
   background-size: cover;
+  position: relative;
 }
-
 .message_cont{
   color: #fff;
   max-width: 500px;
@@ -1050,6 +1071,84 @@ Advertisement List
 .bg_parallax .message_cont .message_text p + ul,
 .bg_parallax .message_cont .message_text ul + p{
   margin-top: 2em;
+}
+/* ---------------
+画像部分の擬似要素
+------------------ */
+.bg_parallax::before,
+.bg_parallax::after{
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: none;
+  width: 50%;
+  height: 50px;
+  bottom: 0;/* --下につけるよ-- */
+  background-color: #f5f4f1;
+}
+.bg_parallax::before{
+  left: 0;
+  transform: translateX(-70px);
+}
+.bg_parallax::after{
+  right: 0;
+  transform: translateX(70px);
+}
+@media only screen and (max-width:1024px){
+  .bg_parallax::before,
+  .bg_parallax::after{
+    height: 40px;
+  }
+  .bg_parallax::before{
+    transform: translateX(-56px);
+  }
+  .bg_parallax::after{
+    transform: translateX(56px);
+  }
+  }
+@media only screen and (max-width:768px){
+  .bg_parallax::before,
+  .bg_parallax::after{
+    height: 30px;
+  }
+  .bg_parallax::before{
+    transform: translateX(-42px);
+  }
+  .bg_parallax::after{
+    transform: translateX(42px);
+  }
+}
+.bg_parallax .message_cont::before,
+.bg_parallax .message_cont::after{
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url(../img/bg_parallax_arr.png);
+  width: 70px;
+  height: 50px;
+  bottom: 0;/* --下につけるよ-- */
+  left: 50%; /*--rightでも可能。真ん中に持ってきたい-*/
+  
+}
+.bg_parallax .message_cont::before{
+  transform: translateX(-100%);
+}
+.bg_parallax .message_cont::after{
+  transform: scale(-1,1);
+}
+@media only screen and (max-width:1024px){
+  .bg_parallax .message_cont::before,
+  .bg_parallax .message_cont::after{
+    width: 56px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width:768px){
+  .bg_parallax .message_cont::before,
+  .bg_parallax .message_cont::after{
+    width: 42px;
+    height: 30px;
+  }
 }
 
 /* ---------------------------------------------
@@ -1190,7 +1289,8 @@ Profile
 }
 }
 
-/*フッター！*/
+/*-----------
+フッター！--------*/
 footer{
   position: relative;
   padding-top: 140px;
